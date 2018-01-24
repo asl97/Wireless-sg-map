@@ -4,7 +4,7 @@ leaflet_data.json contains data generated from [Wireless@sg pdf list](https://ww
 
 Copyright belongs to the respective owners, it isn't cover by the MIT license.
 
-### [Leaflet](https://github.com/Leaflet/Leaflet)
+## [Leaflet](https://github.com/Leaflet/Leaflet)
 
 Copyright (c) 2010-2017, Vladimir Agafonkin
 Copyright (c) 2010-2011, CloudMade
@@ -30,7 +30,7 @@ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABI
 TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-### [Leaflet.markercluster](Leaflet.markercluster)
+## [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster)
 
 Copyright 2012 David Leaver
 

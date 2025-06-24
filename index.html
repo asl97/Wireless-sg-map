@@ -5,6 +5,7 @@
 
 		<link rel="stylesheet" href="./lib/leaflet.markercluster/MarkerCluster.css" />
 		<link rel="stylesheet" href="./lib/leaflet.markercluster/MarkerCluster.Default.css" />
+		<link rel="stylesheet" href="./lib/leaflet-gps/dist/leaflet-gps.src.css" />
 		<style>
 			.leaflet-popup-content p {
 				margin: 0 0;
@@ -14,6 +15,7 @@
 			}
 		</style>
 		<script src="./lib/leaflet.markercluster/leaflet.markercluster-src.js"></script>
+		<script src="./lib/leaflet-gps/dist/leaflet-gps.src.js"></script>
 		<script>
 			var map;
 			var ajaxRequest;
@@ -58,6 +60,18 @@
 					}
 				};
 				xobj.send(null);
+
+				var gps = new L.Control.Gps({
+					//autoActive:true,
+					autoCenter:true,
+					maxZoom:Infinity
+				});//inizialize control
+
+				gps.on('gps:disabled', function(e) {
+					e.marker.closePopup()
+				});
+
+				gps.addTo(map);
 			}
 		</script>
 	</head>

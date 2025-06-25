@@ -12,6 +12,7 @@ const filesToCache = [
   './lib/leaflet-gps/dist/gps-icon.svg',
   './lib/leaflet-gps/dist/leaflet-gps.src.css',
   './lib/leaflet-gps/dist/leaflet-gps.src.js',
+  './lib/stackoverflow/68140398.js',
 ]
 
 // the event handler for the activate event

@@ -127,6 +127,11 @@
 				gps.addTo(map);
 			}
 		</script>
+		<script>
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register("sw-offline.js");
+			}
+		</script>
 	</head>
 	<body onload="initmap();">
 		<div id="map" style="width: 100%;height: 100%;"></div>

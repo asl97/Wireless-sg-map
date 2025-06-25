@@ -4,6 +4,7 @@ const filesToCache = [
   './LICENSE',
   './README.md',
   './index.html',
+  './leaflet_data.json',
   './lib/leaflet/leaflet.css',
   './lib/leaflet/leaflet.js',
   './lib/leaflet.markercluster/MarkerCluster.css',

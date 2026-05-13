@@ -1,6 +1,7 @@
 const cacheName = 'asl97-wireless-sg-v0.1';
 const filesToCache = [
   './',
+  './icon.svg',
   './LICENSE',
   './README.md',
   './index.html',

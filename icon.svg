@@ -1,0 +1,18 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22,105L50,60L65,55L80,60L100,45L160,85L167,76L190,90L180,115L165,110L130,120L107,142L80,120L40,120z" fill="lightgrey" stroke="black"/>
+  <circle stroke="black" fill="skyblue" r="15" cx="20" cy="140"/>
+  <g fill="none" stroke-width="10px" stroke="black" stroke-dashoffset="1" stroke-dasharray="1 3">
+    <circle r="60" cx="5" cy="155" pathLength="4"/>
+    <circle r="90" cx="5" cy="155" pathLength="4"/>
+    <circle r="120" cx="5" cy="155" pathLength="4"/>
+  </g>
+  <g fill="none" stroke-width="8px" stroke="skyblue" stroke-dashoffset="248" stroke-dasharray="246 754">
+    <circle r="60" cx="5" cy="155" pathLength="1000"/>
+    <circle r="90" cx="5" cy="155" pathLength="1000"/>
+    <circle r="120" cx="5" cy="155" pathLength="1000"/>
+  </g>
+  <text font-size="30px" x="50" y="35" textLength="140" lengthAdjust="spacingAndGlyphs">Wireless</text>
+  <text font-size="80px" x="125" y="120">@</text>
+  <text font-size="30px" x="50" y="185" textLength="140" lengthAdjust="spacingAndGlyphs">SGX Map</text>
+  <text font-size="5px" x="130" y="191">By asl97@github</text>
+</svg>

@@ -1,0 +1,60 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+jobs:
+  build:
+    name: Generate APK
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          path: 'web'
+
+      - name: Set up JDK 24
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '24'
+
+      - uses: gradle/actions/setup-gradle@v6
+        id: setup-gradle
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      # Install Capacitor CLI and Core packages
+      - name: Install Dependencies
+        run: |
+          npm install @capacitor/core @capacitor/cli @capacitor/android @capacitor/assets
+
+      - name: Setup Capacitor
+        run: |
+          npx cap init "W@SGX Map" io.github.asl97.wireless_sg_map --web-dir web
+          npx cap add android
+          mkdir assets
+          cp web/icon-1024.png assets/logo.png
+          npx @capacitor/assets generate --android
+          npx cap sync android
+
+      - name: Remove ext folder from apk build
+        run: |
+          rm -r android/app/src/main/assets/public/ext
+
+      - name: Build APK
+        run: |
+          chmod +x android/gradlew
+          cd android
+          ./gradlew assembleDebug
+
+      - name: Upload APK Artifact
+        uses: softprops/action-gh-release@v3
+        with:
+          prerelease: true
+          files: android/app/build/outputs/apk/debug/app-debug.apk
